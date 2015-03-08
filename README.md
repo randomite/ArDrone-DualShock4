@@ -19,7 +19,12 @@ git clone https://github.com/randomite/ArDrone-DualShock4.git
 
 ##Usage
 1. Connect your computer to drone's wifi network
-2. Inside the repo that you cloned above:
+2. Connect your controller to you computer
+  1. You can use the usb cable
+  2. Or you can use bluetooth
+    1. For [mac] (http://www.mactrast.com/2013/10/use-playstation-4-dualshock-4-controller-play-games-mac/)
+    2. For [pc] (http://www.gamepur.com/news/12584-how-pair-ps4s-dualshock-4-controller-pc-bluetooth.html) 
+3. Inside the repo that you cloned above:
 ````bash
 node fly.js
 ````
