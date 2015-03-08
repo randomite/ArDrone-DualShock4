@@ -2,6 +2,7 @@ var arDrone = require('ar-drone');
 var client  = arDrone.createClient();
 var dualShock = require('dualshock-controller');
 
+console.log("\n\n Press the 'x' button to take off and the'triangle button to land' ");
 /**
 * DUALSHOCK Controller Initializaton
 * Supports both DUALSHOCK 3 and DUALSHOCK 4
@@ -96,6 +97,7 @@ controller.on('circle:press', function(data) {
 * Moves the drone down when pressed
 **/
 controller.on('l2:press', function(data) {
+    console.log("going down");    
     client.down(1);
 });
 
@@ -112,6 +114,7 @@ controller.on('l2:release',function(data){
 * Moves the drone down when pressed
 **/
 controller.on('r2:press', function(data) {
+    console.log("going up");
     client.up(1);
 });
 
