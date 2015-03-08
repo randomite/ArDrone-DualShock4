@@ -34,17 +34,28 @@ controller.on('x:press', function(data) {
 /**
 * Event handler for right joytick move
 * Moves the drone left or right on a hortizontal axis
+* Moves the drone forward and backward on a horizontal axis
 **/
 controller.on('right:move', function(data) {
     //0 to 127 to 255
     var leftOrRight = data.x /255;
-    if(leftOrRight < 0.4){
+    var forwardOrBack = data.y /255;
+
+    if (forwardOrBack>=0 && forwardOrBack <=0.4) {
+        console.log("going forward: " + forwardOrBack);
+        client.front(forwardOrBack*2);
+    }else if (forwardOrBack<=1 && forwardOrBack >=0.6) {
+        console.log("going backwards:" + forwardOrBack);
+        client.back((forwardOrBack - 0.5)*2);
+    }
+
+    if(leftOrRight <= 0.4){
     	var leftRightSpeed = (leftOrRight+0.0001)*2; 
-    	console.log(leftRightSpeed);
+    	console.log("going left");
     	client.left(1);
-    }else if(leftOrRight > 0.6){
+    }else if(leftOrRight >= 0.6){
     	var leftRightSpeed = (leftOrRight - 0.6)*2;
-    	console.log(leftRightSpeed);
+    	console.log("going right");
     	client.right(1);
     }else{
     	client.stop();
@@ -59,13 +70,13 @@ controller.on('left:move', function(data) {
     //0 to 127 to 255
     var leftOrRight = data.x /255;
 
-    if(leftOrRight < 0.4){
+    if(leftOrRight <= 0.4){
     	var leftRightSpeed = (leftOrRight+0.0001)*2; 
-    	console.log(leftRightSpeed);
+    	console.log("turning counterClockwise");
     	client.counterClockwise(1);
-    }else if(leftOrRight > 0.6){
+    }else if(leftOrRight >= 0.6){
     	var leftRightSpeed = (leftOrRight - 0.6)*2;
-    	console.log(leftRightSpeed);
+    	console.log("turning clockwise");
     	client.clockwise(1);
     }else{
     	client.stop();
