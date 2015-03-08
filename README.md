@@ -36,3 +36,7 @@ node fly.js
 | right joystick - down |move backward|
 | left joystick - left |move counter-clockwise |
 | left joystick - right |move clockwise |
+
+##TODO
+1. Video Stream from drone's built in camera
+2. Use DualShock touchpad for more controls
