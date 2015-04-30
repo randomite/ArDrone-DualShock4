@@ -24,6 +24,7 @@ git clone https://github.com/randomite/ArDrone-DualShock4.git
   2. Or you can use bluetooth
     1. For [mac] (http://www.mactrast.com/2013/10/use-playstation-4-dualshock-4-controller-play-games-mac/)
     2. For [pc] (http://www.gamepur.com/news/12584-how-pair-ps4s-dualshock-4-controller-pc-bluetooth.html) 
+    3. For [linux \(ubuntu)] (http://askubuntu.com/questions/427311/how-to-setup-dual-shock-4-controller-with-ubuntu-13-10)
 3. Inside the repo that you cloned above:
 ````bash
 node fly.js
