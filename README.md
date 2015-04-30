@@ -45,3 +45,5 @@ node fly.js
 ##TODO
 1. Video Stream from drone's built in camera
 2. Use DualShock touchpad for more controls
+
+Feel free to fork and submit a pull request!
