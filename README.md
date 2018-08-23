@@ -1,6 +1,6 @@
 Use this script to control an ARDrone 2.0 with a DUALSHOCK 4 Controller.
 
-##Installation:
+## Installation:
 
 1.Install the Ar-Drone module from npm:
 ````bash
@@ -17,7 +17,7 @@ npm install dualshock-controller
 git clone https://github.com/randomite/ArDrone-DualShock4.git
 ````
 
-##Usage
+## Usage
 1. Connect your computer to drone's wifi network
 2. Connect your controller to you computer
   1. You can use the usb cable
@@ -29,7 +29,7 @@ git clone https://github.com/randomite/ArDrone-DualShock4.git
 ````bash
 node fly.js
 ````
-##DualShock Controls
+## DualShock Controls
 | Button        | Result           |
 | :-------------: |:-------------:|
 | x      | takeoff |
@@ -43,7 +43,7 @@ node fly.js
 | left joystick - left |move counter-clockwise |
 | left joystick - right |move clockwise |
 
-##TODO
+## TODO
 1. Video Stream from drone's built in camera
 2. Use DualShock touchpad for more controls
 
